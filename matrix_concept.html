@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gjenbrukskartet – Konseptuelt grunnlag</title>
+  <link rel="stylesheet" href="gjenbrukskartet.css" />
+  <style>
+  body { max-width: 900px; }
+</style>
+</head>
+<body>
+
+  <h1>Gjenbrukskartet – Konseptuelt grunnlag</h1>
+  <p class="subtitle">Hvorfor rammeverket eksisterer, hva aksene betyr, og logikken bak rasjonell konvergens.</p>
+
+  <div class="nav">
+    ← <a href="matrix.html">3×3-matrisen</a>
+    &nbsp;·&nbsp;
+    <a href="matrix2x2.html">2×2-matrisen</a>
+  </div>
+
+  <!-- ── AXES ── -->
+  <section>
+    <h2>Rammeverkets to akser</h2>
+    <div class="axes-grid">
+
+      <div class="axis-card">
+        <div class="axis-tag tag-y">Y-akse</div>
+        <h3>Geografisk rekkevidde</h3>
+        <p>Beskriver hvor mange som er berørt av kapabiliteten – fra én kommune til hele nasjonen.</p>
+        <div class="axis-levels">
+          <div class="axis-level level-national">Nasjonalt</div>
+          <div class="axis-level level-regional">Regionalt</div>
+          <div class="axis-level level-local">Lokalt</div>
+        </div>
+      </div>
+
+      <div class="axis-card">
+        <div class="axis-tag tag-x">X-akse</div>
+        <h3>Grad av rasjonell konvergens</h3>
+        <p>Hvor irrasjonelt er det å <em>ikke</em> bruke eller bidra til fellesgodet? Høy konvergens = egenutviklet alternativ er vanskelig å forsvare.</p>
+        <div class="axis-levels">
+          <div class="axis-level level-high">Høy – fellesgodet er det åpenbart riktige valget</div>
+          <div class="axis-level level-mid">Middels – kost/nytte er usikker</div>
+          <div class="axis-level level-low">Lav – billigere/raskere å bygge selv</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONVERGENCE SCALE ── -->
+  <section>
+    <h2>X-aksen utdypet: fire nivåer av fellesskap</h2>
+
+    <div class="scale-arrow">
+      <span class="scale-arrow-label">Eget</span>
+      <div class="scale-arrow-line"></div>
+      <span class="scale-arrow-label">Fellesgode →</span>
+    </div>
+
+    <div class="convergence-scale">
+      <div class="conv-step conv-1">
+        <span class="conv-step-label">Nivå 1</span>
+        <span class="conv-step-title">Etatsspesifikt</span>
+        <span class="conv-step-desc">Bygget for og av én virksomhet. Ikke tilgjengelig for andre. Gjenbruk krever ombygging.</span>
+        <span class="conv-step-example">Intern saksbehandlingsløsning, etatens egne fagsystemer</span>
+      </div>
+      <div class="conv-step conv-2">
+        <span class="conv-step-label">Nivå 2</span>
+        <span class="conv-step-title">Sektorgode</span>
+        <span class="conv-step-desc">Deles innen én sektor. Krever sektoravtale eller tilknytning. Synlig for andre i sektoren.</span>
+        <span class="conv-step-example">Norsk Helsenett, KS FIKS, BRREG-API for kommuner</span>
+      </div>
+      <div class="conv-step conv-3">
+        <span class="conv-step-label">Nivå 3</span>
+        <span class="conv-step-title">Fellesgode</span>
+        <span class="conv-step-desc">Åpent for alle offentlige virksomheter. Sentralt forvaltet og finansiert. Konvergenspress er høyt.</span>
+        <span class="conv-step-example">ID-porten, Altinn, eFormidling, NAIS</span>
+      </div>
+      <div class="conv-step conv-4">
+        <span class="conv-step-label">Nivå 4</span>
+        <span class="conv-step-title">Samfunnsgode</span>
+        <span class="conv-step-desc">Åpent for offentlig sektor, næringsliv og sivilsamfunn. Infrastruktur for hele det digitale samfunnet.</span>
+        <span class="conv-step-example">Kartverkets åpne API-er, Brønnøysundregistrene, Enhetsregisteret</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── KEY INSIGHT ── -->
+  <div class="insight">
+    <div class="insight-label">Kjerneinnsikten</div>
+    <p>
+      Det er ikke et spørsmål om <strong>råd til å bidra</strong> til digitale fellesgoder –
+      det er et spørsmål om <strong>råd til å la være</strong>.
+      Digitale fellesgoder er ikke-rivaliserende: å gi én etat tilgang til ID-porten koster ingenting.
+      Jo fler som bruker og forbedrer et fellesgode, jo dyrere blir det <em>relativt</em> å bygge noe eget.
+      Konvergensen er rasjonell, ikke normativ.
+    </p>
+  </div>
+
+  <!-- ── WHY MARKET FAILS ── -->
+  <section>
+    <h2>Hvorfor markedet ikke løser dette</h2>
+    <div class="card-grid card-grid-2">
+
+      <div class="card card-accent-red">
+        <h3>Digitalt felleseieproblem <span style="font-weight:400; font-size:0.78rem;">(tragedy of the commons)</span></h3>
+        <p>Den klassiske teorien om felles eiendom (<em>the tragedy of the commons</em>) handler om <em>overforbruk</em> av knappe ressurser – som beite eller fisk. Digitale fellesgoder forbrukes ikke opp; de er ikke-rivaliserende. Den digitale varianten er derfor den <strong>motsatte tragedien: underinvestering og duplikasjon</strong>. Alle venter på at noen andre skal bygge og vedlikeholde fellesgodet, mens de selv bygger noe nesten identisk på siden.</p>
+      </div>
+
+      <div class="card card-accent-amber">
+        <h3>Finansierings&shy;problemet</h3>
+        <p>Hvem betaler for å løfte en løsning fra etatsgode til fellesgode? Etaten som bygde det har ingen insentiv til å vedlikeholde for andre. Privat sektor ser ikke lønnsomhet i å åpne. Resultatet er at gode løsninger forblir i siloer – ikke fordi de ikke burde deles, men fordi finansieringsmodellen for deling mangler.</p>
+      </div>
+
+      <div class="card card-accent-green">
+        <h3>Nettverkseffekten</h3>
+        <p>Digitale fellesgoder har en selvforsterkende egenskap: jo flere som bruker og bidrar til ID-porten eller Altinn, jo bedre og billigere blir løsningen for alle. Dette ligner TCP/IP – ingen ble pålagt å bruke det, men alternativet ble etter hvert irrasjonelt. Fellesgoder med kritisk masse når et «konvergenstipping point».</p>
+      </div>
+
+      <div class="card card-accent-blue">
+        <h3>Digdirs rolle</h3>
+        <p>Digdir eksisterer fordi markedet ikke håndterer koordineringsproblemet. <a href="https://www.digdir.no/digital-samhandling/prinsipp-5-del-og-gjenbruk-losninger/1062" target="_blank" style="color:#1d4ed8;">Arkitekturprinsipp 5 – «Del og gjenbruk løsninger»</a> er Digdirs formelle forankring av dette: deling fremmer samhandlingsevne, innovasjon og effektivitet, og lar virksomheter fokusere på kjernevirksomhet fremfor å løse problemer som allerede er løst. Men uten hjemmel til å <em>pålegge</em> gjenbruk, avhenger effekten av at aktørene selv ser det rasjonelle.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── OECD ── -->
+  <section>
+    <h2>Norge i et internasjonalt perspektiv</h2>
+    <div class="card-grid card-grid-2">
+
+      <div class="card card-accent-blue">
+        <h3>OECD Digital Government Index 2023</h3>
+        <p><a href="https://www.oecd.org/en/publications/2023-oecd-digital-government-index_1a89ed5e-en.html" target="_blank" style="color:#1d4ed8;">OECDs Digital Government Index</a> måler hvor godt land har etablert forutsetningene for en sammenhengende, menneskesentriert digital transformasjon av offentlig sektor. Norge scorer gjennomgående høyt – særlig på datadeling og åpenhet. Indeksen understreker likevel at koordinering på tvers av etater og nivåer er den vedvarende utfordringen for avanserte digitaliseringsland.</p>
+      </div>
+
+      <div class="card card-accent-amber">
+        <h3>Norges vedvarende utfordring</h3>
+        <p>Til tross for høy digital modenhet viser OECD-analyser at Norge sliter med det samme koordineringsproblemet som andre land: mange etater bygger parallelle løsninger for lignende behov, og nasjonale fellesløsninger tas ikke alltid i bruk selv der det er åpenbart fornuftig. Utfordringen er ikke teknologisk – den er institusjonell. Hvem har ansvar, hvem betaler, og hvem bestemmer hva som skal være felles?</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONSULTANT ROLE ── -->
+  <section>
+    <div class="role-box">
+      <h2>Konsulentens rolle som brobygger</h2>
+      <p>Konsulenter beveger seg mellom prosjekter, etater og sektorer. Det gjør dem til de eneste aktørene som systematisk ser tvers av siloene – og dermed i unik posisjon til å identifisere og løfte fellesgodepotensial.</p>
+
+      <div class="role-steps">
+        <div class="role-step">
+          <div class="role-step-num">1</div>
+          <div class="role-step-title">Gjenkjenne</div>
+          <div class="role-step-desc">Se at et problem du møter i prosjekt A er løst – eller halvt løst – i prosjekt B eller C. Matrisen gir et felles språk for å beskrive dette.</div>
+        </div>
+        <div class="role-step">
+          <div class="role-step-num">2</div>
+          <div class="role-step-title">Plassere</div>
+          <div class="role-step-desc">Bruk rammeverket til å vurdere: er dette et nivå 1-problem som <em>bør</em> forbli lokalt, eller et nivå 3-kandidat som mangler fellesgode-infrastruktur?</div>
+        </div>
+        <div class="role-step">
+          <div class="role-step-num">3</div>
+          <div class="role-step-title">Løfte</div>
+          <div class="role-step-desc">Bruk konvergens-argumentet positivt: ikke «du bør dele», men «her er det faktisk irrasjonelt å ikke samordne – her er kostnaden ved silobygging».</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 2x2 ── -->
+  <section>
+    <h2>Forenklet versjon: 2×2-matrisen</h2>
+    <p style="margin-bottom:16px;">For presentasjoner og raske vurderinger finnes en forenklet variant med to akser: <strong>scope</strong> (smal vs. bred rekkevidde) og <strong>fellesskap</strong> (bør dette løses i fellesskap?). Den gir fire tydelige quadranter med direkte handlingsanvisninger.</p>
+    <div class="card-grid card-grid-2">
+
+      <div class="card card-accent-amber">
+        <h3>⚠️ Koordineringsgap</h3>
+        <p><em>Bred scope + bygg selv.</em> Mange har behovet, men ingen tar ansvar for en felles løsning. Høyest risiko for sløsing gjennom parallellbygging. Her kan konsulenten synliggjøre gapet og argumentere for koordinering.</p>
+      </div>
+
+      <div class="card card-accent-green">
+        <h3>✅ Konverger</h3>
+        <p><em>Bred scope + bruk felles.</em> Fellesgodet er modent – ID-porten, Altinn, NAIS og lignende. Egenutviklet alternativ er vanskelig å forsvare teknisk, politisk og økonomisk.</p>
+      </div>
+
+      <div class="card" style="border-left:4px solid #94a3b8;">
+        <h3>🏠 Lokal kontroll</h3>
+        <p><em>Smal scope + bygg selv.</em> Konteksttilpasning gir mer verdi enn standardisering. Lokal variasjon er her fornuftig og bør ikke presses inn i en fellesmal.</p>
+      </div>
+
+      <div class="card card-accent-blue">
+        <h3>🔗 Bygg på skuldrene</h3>
+        <p><em>Smal scope + bruk felles.</em> Løsningen er konteksttilpasset, men bruker felles fundament – autentisering, kart, skjema – uten å gjenoppfinne hjulet.</p>
+      </div>
+
+    </div>
+    <p style="font-size:0.82rem; color:#555;">→ <a href="matrix2x2.html" style="color:#3b82f6; font-weight:600;">Åpne 2×2-matrisen med eksempler</a></p>
+  </section>
+
+  <!-- ── HOW TO READ THE MATRIX ── -->
+  <section>
+    <h2>Slik leser du 3×3-matrisen</h2>
+    <div class="card-grid card-grid-2">
+
+      <div class="card card-accent-green">
+        <h3>Øvre høyre hjørne → Konvergens</h3>
+        <p>Nasjonalt nivå + høy konvergens = modne fellesgoder der det er irrasjonelt å velge bort. Bruk dem. Bygg på dem. Bidra til dem når du kan.</p>
+      </div>
+
+      <div class="card card-accent-red">
+        <h3>Nedre venstre hjørne → Lokal innovasjon</h3>
+        <p>Lokalt nivå + lav konvergens = rom for konteksttilpassede løsninger. Ikke alt bør standardiseres. Matrisen hjelper å legitimere lokal variasjon der det faktisk er fornuftig.</p>
+      </div>
+
+      <div class="card card-accent-amber">
+        <h3>Tomme celler → Hull i landskapet</h3>
+        <p>Nasjonal rekkevidde + lav konvergens er et faresignal: her finnes et behov mange har, men ingen har løst som fellesgode ennå. Potensielle fremtidige Digdir-mandater.</p>
+      </div>
+
+      <div class="card card-accent-purple">
+        <h3>Bevegelse over tid</h3>
+        <p>Kapabiliteter kan flytte seg i matrisen. En teknologi som er lavt-konvergens i dag kan bli høyt-konvergens når kritisk masse nås. Matrisen er et øyeblikksbilde, ikke en permanent klassifisering.</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

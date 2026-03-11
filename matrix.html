@@ -3,181 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <title>Gjenbrukskartet</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f4f6f9;
-      padding: 40px 32px;
-      color: #1a1a2e;
-    }
-
-    h1 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-      color: #1a1a2e;
-    }
-
-    .subtitle {
-      font-size: 0.85rem;
-      color: #555;
-      margin-bottom: 32px;
-    }
-
-    .legend {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 24px;
-      font-size: 0.8rem;
-      align-items: center;
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .legend-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 3px;
-    }
-
-    /* ── Grid wrapper ── */
-    .grid-wrapper {
-      display: grid;
-      grid-template-columns: 110px repeat(3, 1fr);
-      grid-template-rows: auto repeat(3, auto);
-      gap: 4px;
-    }
-
-    /* Corner cell */
-    .corner {
-      background: transparent;
-    }
-
-    /* Column headers */
-    .col-header {
-      text-align: center;
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 10px 8px;
-      border-radius: 8px 8px 0 0;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-    }
-
-    .col-low    { background: #fde8e8; color: #c0392b; }
-    .col-mid    { background: #fef3cd; color: #856404; }
-    .col-high   { background: #d4edda; color: #155724; }
-
-    /* Row headers */
-    .row-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      writing-mode: horizontal-tb;
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 12px 8px;
-      border-radius: 8px 0 0 8px;
-      text-align: center;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      line-height: 1.3;
-    }
-
-    .row-national { background: #cfe2ff; color: #084298; }
-    .row-regional { background: #d1f2eb; color: #0b5345; }
-    .row-local    { background: #fde8d8; color: #7b341a; }
-
-    /* Data cells */
-    .cell {
-      padding: 12px 10px;
-      border-radius: 0;
-      min-height: 110px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-
-    /* Subtle gradient tinting per column */
-    .cell-low    { background: #fff5f5; }
-    .cell-mid    { background: #fffdf0; }
-    .cell-high   { background: #f0fff4; }
-
-    /* Corner rounding on edge cells */
-    .cell:last-child { border-radius: 0 8px 8px 0; }
-
-    /* Chips */
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 4px 9px;
-      border-radius: 20px;
-      width: fit-content;
-      white-space: nowrap;
-    }
-
-    .chip-infra {
-      background: #e8eaf6;
-      color: #283593;
-      border: 1px solid #9fa8da;
-    }
-
-    .chip-app {
-      background: #fce4ec;
-      color: #880e4f;
-      border: 1px solid #f48fb1;
-    }
-
-    .chip-icon {
-      font-size: 0.7rem;
-    }
-
-    /* X-axis label */
-    .x-axis-label {
-      grid-column: 2 / 5;
-      text-align: center;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #888;
-      padding: 10px 0 0;
-      letter-spacing: 0.05em;
-    }
-
-    .y-axis-label {
-      grid-row: 2 / 5;
-      grid-column: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .y-label-text {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #888;
-      letter-spacing: 0.05em;
-    }
-  </style>
+  <link rel="stylesheet" href="gjenbrukskartet.css" />
 </head>
 <body>
 
   <h1>Gjenbrukskartet</h1>
-  <p class="subtitle">Et verktøy for å synliggjøre potensialet for gjenbruk og bidrag til digitale fellestjenester.</p>
+  <p class="subtitle">
+    Et verktøy for å plassere digitale kapabiliteter etter geografisk rekkevidde og grad av rasjonell konvergens.
+    <a href="matrix_concept.html" style="margin-left:10px; font-size:0.8rem; color:#3b82f6; font-weight:600;">
+      Les om rammeverket →
+    </a>
+  </p>
 
   <div class="legend">
-    <span style="font-weight:600; font-size:0.8rem;">Forklaring:</span>
+    <span style="font-weight:600; font-size:0.8rem;">Type:</span>
     <div class="legend-item">
       <div class="legend-dot" style="background:#c5cae9; border:1px solid #9fa8da;"></div>
       <span>Infrastruktur / Plattform</span>
@@ -186,26 +25,50 @@
       <div class="legend-dot" style="background:#f8bbd0; border:1px solid #f48fb1;"></div>
       <span>Applikasjon</span>
     </div>
+    <span style="margin-left:12px; font-weight:600; font-size:0.8rem;">Konvergens:</span>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#fde8e8; border:1px solid #f5c6cb;"></div>
+      <span>Lav – etatsspesifikt (nivå 1)</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#fef3cd; border:1px solid #fde68a;"></div>
+      <span>Middels – sektorgode (nivå 2)</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:#d4edda; border:1px solid #bbf7d0;"></div>
+      <span>Høy – fellesgode / samfunnsgode (nivå 3–4)</span>
+    </div>
   </div>
 
   <div class="grid-wrapper">
 
-    <!-- Row 0: column headers -->
+    <!-- Rad 0: kolonne-headers -->
     <div class="corner"></div>
-    <div class="col-header col-low">↓ Lav gjenbrukbarhet</div>
-    <div class="col-header col-mid">Middels gjenbrukbarhet</div>
-    <div class="col-header col-high">↑ Høy gjenbrukbarhet</div>
+    <div class="col-header col-low">
+      Nivå 1 · Etatsspesifikt
+      <br><span style="font-weight:400; text-transform:none; font-size:0.7rem;">Lav konvergens – billigere å bygge selv</span>
+    </div>
+    <div class="col-header col-mid">
+      Nivå 2 · Sektorgode
+      <br><span style="font-weight:400; text-transform:none; font-size:0.7rem;">Middels konvergens – vurder deling</span>
+    </div>
+    <div class="col-header col-high">
+      Nivå 3–4 · Fellesgode / Samfunnsgode
+      <br><span style="font-weight:400; text-transform:none; font-size:0.7rem;">Høy konvergens – irrasjonelt å velge bort</span>
+    </div>
 
-    <!-- Row 1: Nasjonalt -->
+    <!-- Rad 1: Nasjonalt -->
     <div class="row-header row-national">Nasjonalt</div>
 
     <div class="cell cell-low">
       <span class="chip chip-app">Etatsspesifikt fagsystem</span>
       <span class="chip chip-app">Intern skattesystem</span>
+      <span class="cell-note">Bygget for og av én etat. Gjenbruk krever ombygging.</span>
     </div>
 
     <div class="cell cell-mid">
-      <!-- intentionally empty – ingen treff i denne sonen -->
+      <span class="chip chip-infra">🔧 Norsk Helsenett</span>
+      <span class="cell-note">Nasjonalt, men avgrenset til én sektor.</span>
     </div>
 
     <div class="cell cell-high">
@@ -213,44 +76,54 @@
       <span class="chip chip-infra">🔧 Altinn</span>
       <span class="chip chip-infra">🔧 ID-porten</span>
       <span class="chip chip-infra">🔧 Kartverket API</span>
+      <span class="chip chip-infra">🔧 Enhetsregisteret</span>
       <span class="chip chip-infra">🔧 Språkrådet API</span>
       <span class="chip chip-app">Entur</span>
+      <span class="cell-note">Åpent for alle. Egenutviklet alternativ er vanskelig å forsvare.</span>
     </div>
 
-    <!-- Row 2: Regionalt -->
+    <!-- Rad 2: Regionalt -->
     <div class="row-header row-regional">Regionalt</div>
 
     <div class="cell cell-low">
       <span class="chip chip-app">VY Billett</span>
+      <span class="cell-note">Forretningsdrevet. Ikke designet for gjenbruk.</span>
     </div>
 
     <div class="cell cell-mid">
       <span class="chip chip-app">Regional helseapp</span>
       <span class="chip chip-app">Fylkeskommunal løsning</span>
+      <span class="cell-note">Deles innen en region eller sektor.</span>
     </div>
 
     <div class="cell cell-high">
       <span class="chip chip-infra">🔧 KS FIKS</span>
+      <span class="cell-note">Fellesplattform for kommunal sektor.</span>
     </div>
 
-    <!-- Row 3: Lokalt -->
+    <!-- Rad 3: Lokalt -->
     <div class="row-header row-local">Lokalt</div>
 
     <div class="cell cell-low">
       <span class="chip chip-infra">🔧 Lokal driftsplattform</span>
       <span class="chip chip-app">Kommunal søknadsportal</span>
       <span class="chip chip-app">Intern kommuneapp</span>
+      <span class="cell-note">Konteksttilpasset. Lokal variasjon er her fornuftig.</span>
     </div>
 
     <div class="cell cell-mid">
-      <!-- intentionally empty -->
+      <span class="cell-note" style="color:#bbb; border-top:none; padding-top:0;">Potensielt kandidat for sektorsamarbeid?</span>
     </div>
 
     <div class="cell cell-high">
-      <!-- intentionally empty -->
+      <span class="cell-note" style="color:#bbb; border-top:none; padding-top:0;">Tom celle – signal om hull i fellesgodedekningen.</span>
     </div>
 
   </div>
+
+  <p style="text-align:center; font-size:0.72rem; font-weight:600; color:#aaa; padding: 10px 0 0 120px; letter-spacing:0.05em;">
+    ← Lav konvergens &nbsp;&nbsp;&nbsp; Grad av rasjonell konvergens &nbsp;&nbsp;&nbsp; Høy konvergens →
+  </p>
 
 </body>
 </html>
