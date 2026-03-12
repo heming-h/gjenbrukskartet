@@ -8,21 +8,34 @@ Rammeverket ble utviklet som del av et foredrag om offentlig digitalisering, med
 
 > *Som konsulent og utvikler beveger du deg mellom prosjekter, etater og plattformer - nye miljøer men ofte like problemstillinger og behov. I dette foredraget utforsker vi hvordan konsulenter kan bidra til å styrke offentlige fellestjenester – og hvordan bruk av dem i egne leveranser gjør offentlig digitalisering mer brukervennlig og bærekraftig.*
 
-## Innhold
+## Hovedside
+
+### [`matrix2x2.html`](https://heming-h.github.io/gjenbrukskartet/matrix2x2.html) ← start her
+
+👉 **https://heming-h.github.io/gjenbrukskartet/matrix2x2.html**
+
+En interaktiv 2×2-matrise som plasserer digitale kapabiliteter i fire kvadranter basert på to spørsmål:
+
+- **X-akse:** Bør løsningen bygges selv, eller finnes det et felles alternativ?
+- **Y-akse:** Er behovet bredt (delt av mange etater) eller smalt (konteksttilpasset)?
+
+De fire kvadrantene er:
+- ⚠️ **Koordineringsgap** – Bred scope, bygges selv: risiko for duplisering på tvers av etater
+- ✅ **Konverger** – Bred scope, bruk felles: fellesgodet finnes og er modent
+- 🏠 **Lokal kontroll** – Smal scope, bygges selv: egenutvikling er fornuftig
+- 🔗 **Bygg på skuldrene** – Smal scope, bruk felles: konteksttilpasset løsning på felles fundament
+
+## Øvrige filer
 
 ### `matrix.html`
-En interaktiv 3×3-matrise som visualiserer digitale kapabiliteter langs to akser:
+En utvidet 3×3-matrise som i tillegg visualiserer kapabilitetenes **geografiske nivå** (Lokalt · Regionalt · Nasjonalt) langs Y-aksen og **gjenbrukbarhet** langs X-aksen.
 
-- **Y-akse (nivå):** Lokalt · Regionalt · Nasjonalt
-- **X-akse (gjenbrukbarhet):** Lav · Middels · Høy
-
-Kapabilitetene er kategorisert i to typer:
-- 🔧 **Infrastruktur / Plattformer** – f.eks. NAIS, Altinn, ID-porten, Kartverket API, Språkrådet API, KS FIKS
-- **Applikasjoner** – f.eks. Entur, VY Billett, regional helseapp, kommunale løsninger
+### `matrix_concept.html`
+Konseptbeskrivelse og bakgrunn for rammeverket.
 
 ### `quadrantChart.md`
-Et tidlig utkast av matrisen i Mermaid quadrantChart-format. Beholdt som referanse, men erstattet av HTML-filen for å støtte en ekte 3×3-struktur.
+Tidlig utkast i Mermaid quadrantChart-format. Beholdt som referanse.
 
 ## Bruk
 
-Åpne `matrix.html` direkte i en nettleser – ingen server eller installasjon nødvendig.
+Åpne `matrix2x2.html` i nettleseren via lenken over, eller åpne HTML-filene lokalt – ingen server eller installasjon nødvendig.
