@@ -184,15 +184,15 @@ section:last-child { margin-bottom: 0; }
 }
 
 .chip-infra {
-  background: #e8eaf6;
-  color: #283593;
-  border: 1px solid #9fa8da;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #a3d9b1;
 }
 
 .chip-app {
-  background: #fce4ec;
-  color: #880e4f;
-  border: 1px solid #f48fb1;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 1px solid #93c5fd;
 }
 
 /* Akseetiketter */

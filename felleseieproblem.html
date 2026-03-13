@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <title>Det digitale fellseieproblemet</title>
+  <link rel="stylesheet" href="gjenbruksmatrisen.css" />
+  <style>
+    body { max-width: 900px; }
+
+    .hero {
+      background: #1a1a2e;
+      color: #e2e8f0;
+      border-radius: 12px;
+      padding: 32px 36px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero h2 {
+      color: #fff;
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 0.88rem;
+    }
+
+    .hero strong { color: #fff; }
+
+    .vs-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      align-items: stretch;
+      margin-bottom: 36px;
+    }
+
+    .vs-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .vs-card h3 {
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .vs-card p {
+      font-size: 0.82rem;
+      line-height: 1.6;
+    }
+
+    .vs-card-classic { border: 1.5px solid #fca5a5; }
+    .vs-card-digital { border: 1.5px solid #93c5fd; }
+
+    .vs-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #aaa;
+      padding: 0 16px;
+    }
+
+    .example-flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin: 24px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .flow-step {
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-align: center;
+      min-width: 120px;
+      line-height: 1.4;
+    }
+
+    .flow-step-problem {
+      border: 1.5px solid #fca5a5;
+      background: #fff5f5;
+      color: #991b1b;
+    }
+
+    .flow-step-neutral {
+      border: 1.5px solid #e2e8f0;
+      color: #333;
+    }
+
+    .flow-step-solution {
+      border: 1.5px solid #bbf7d0;
+      background: #f0fdf4;
+      color: #155724;
+    }
+
+    .flow-arrow {
+      font-size: 1.1rem;
+      color: #aaa;
+      padding: 0 8px;
+      font-weight: 700;
+    }
+
+    .num-circle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #1a1a2e;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+
+    .reason-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .reason-list li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 0.84rem;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .cta-box {
+      background: #f0fdf4;
+      border: 1.5px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 28px 32px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      color: #155724;
+    }
+
+    .cta-box p {
+      max-width: 600px;
+      margin: 0 auto 16px;
+    }
+
+    .cta-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-links a {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .cta-links a:hover { opacity: 0.85; }
+
+    .cta-primary {
+      background: #1a1a2e;
+      color: #fff;
+    }
+
+    .cta-secondary {
+      background: #e2e8f0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Det digitale fellseieproblemet</h1>
+  <p class="subtitle">
+    Hvorfor offentlige etater bygger det samme – om og om igjen.
+  </p>
+
+  <div class="nav">
+    <a href="matrix2x2_forenklet.html">Forenklet matrise</a>
+    &nbsp;·&nbsp;
+    <a href="matrix2x2.html">2×2-matrisen</a>
+    &nbsp;·&nbsp;
+    <a href="matrix.html">3×3-matrisen</a>
+    &nbsp;·&nbsp;
+    <a href="matrix_concept.html">Om rammeverket</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <h2>Tenk deg at fem kommuner bygger hver sin chatbot.</h2>
+    <p>
+      Alle løser det samme problemet. Ingen vet om de andre.
+      Hver kommune bruker tid, penger og utviklere på å finne opp hjulet på nytt —
+      ikke fordi de vil, men fordi <strong>ingen har ansvar for å samordne</strong>.
+    </p>
+  </div>
+
+  <!-- ── KLASSISK VS DIGITAL ── -->
+  <section>
+    <h2>To typer felleseieproblem</h2>
+
+    <div class="vs-grid">
+      <div class="vs-card vs-card-classic">
+        <h3>🐄 Klassisk: overforbruk</h3>
+        <p>
+          «Tragedy of the commons» handler om <strong>knappe ressurser</strong> som forbrukes opp —
+          som fiskebestander eller beiteområder. Mange bruker, ingen vedlikeholder.
+        </p>
+      </div>
+      <div class="vs-divider">vs.</div>
+      <div class="vs-card vs-card-digital">
+        <h3>💻 Digitalt: underinvestering</h3>
+        <p>
+          Digitale løsninger brukes <strong>ikke opp</strong> — ID-porten blir ikke dårligere av at 1 000 etater bruker den.
+          Problemet er det motsatte: <strong>alle venter på at noen andre skal bygge fellesløsningen</strong>,
+          og bygger sin egen i mellomtiden.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HVORFOR SKJER DETTE? ── -->
+  <section>
+    <h2>Hvorfor skjer dette?</h2>
+
+    <ul class="reason-list">
+      <li>
+        <span class="num-circle">1</span>
+        <span><strong>Ingen eier problemet.</strong> Fellesløsninger faller mellom etatenes budsjetter og ansvarsområder. Alle ser behovet, men ingen har mandat til å samle det.</span>
+      </li>
+      <li>
+        <span class="num-circle">2</span>
+        <span><strong>Det er raskere å bygge selv.</strong> Å vente på en fellesløsning tar tid. Prosjektfrister presser, og «vi fikser det selv» føles mer produktivt — selv om det koster mer totalt.</span>
+      </li>
+      <li>
+        <span class="num-circle">3</span>
+        <span><strong>Siloene ser ikke hverandre.</strong> Etat A vet ikke at etat B bygger det samme. Uten innsyn på tvers blir duplisering usynlig — helt til noen ser det fra utsiden.</span>
+      </li>
+      <li>
+        <span class="num-circle">4</span>
+        <span><strong>Finansieringsmodellen mangler.</strong> Hvem betaler for å gjøre en lokal løsning til et fellesgode? Etaten som bygde den har ikke budsjett eller insentiv til å åpne den for andre.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── FLYT: FRA PROBLEM TIL LØSNING ── -->
+  <section>
+    <h2>Fra silo til fellesskap</h2>
+
+    <div class="example-flow">
+      <div class="flow-step flow-step-problem">
+        5 etater bygger<br>samme løsning
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step flow-step-neutral">
+        Noen ser<br>mønsteret
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step flow-step-neutral">
+        Behovet<br>løftes opp
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step flow-step-solution">
+        Én fellesløsning<br>alle kan bruke
+      </div>
+    </div>
+
+    <p style="font-size: 0.84rem; color: #555; text-align: center; max-width: 650px; margin: 0 auto;">
+      Det har skjedd før — ID-porten, Altinn og Kartverkets API-er startet som enkeltstående prosjekter
+      før de ble fellesgoder. Spørsmålet er: <strong>hva er den neste ID-porten som venter på å bli løftet?</strong>
+    </p>
+  </section>
+
+  <!-- ── NETTVERKSEFFEKTEN ── -->
+  <section>
+    <div class="insight">
+      <div class="insight-label">Nettverkseffekten</div>
+      <p>
+        Jo flere som bruker en fellesløsning, jo <strong>bedre og billigere</strong> blir den for alle —
+        og jo <strong>dyrere</strong> blir det relativt sett å bygge noe eget.
+        Det er dette som gjør at noen fellesgoder når et vippepunkt der det blir
+        <strong>irrasjonelt å ikke bruke dem</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section>
+    <div class="cta-box">
+      <h2>Gjenbruksmatrisen hjelper deg å se mønsteret</h2>
+      <p>Den plasserer digitale tjenester i fire kategorier — fra «dette bør vi samordne» til «dette er greit å løse lokalt».</p>
+      <div class="cta-links">
+        <a href="matrix2x2_forenklet.html" class="cta-primary">Åpne den forenklede matrisen →</a>
+        <a href="matrix_concept.html" class="cta-secondary">Les mer om rammeverket</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

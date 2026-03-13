@@ -2,7 +2,7 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8" />
-  <title>Gjenbruksmatrisen for digitale tjenester – 2×2</title>
+  <title>Gjenbruksmatrisen for digitale tjenester – forenklet</title>
   <link rel="stylesheet" href="gjenbruksmatrisen.css" />
   <style>
     /* ── 2×2-spesifikt ── */
@@ -17,17 +17,17 @@
     .q-cell {
       border-radius: 12px;
       padding: 20px 18px;
-      min-height: 220px;
+      min-height: 200px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
 
     /* Quadrant-farger */
-    .q-nw { background: #fff7ed; border: 1.5px solid #fed7aa; } /* Bred + Bygg selv  → advarsel */
-    .q-ne { background: #f0fdf4; border: 1.5px solid #bbf7d0; } /* Bred + Bruk felles → grønt */
-    .q-sw { background: #f8fafc; border: 1.5px solid #e2e8f0; } /* Smal + Bygg selv  → nøytral */
-    .q-se { background: #eff6ff; border: 1.5px solid #bfdbfe; } /* Smal + Bruk felles → blå */
+    .q-nw { background: #fff7ed; border: 1.5px solid #fed7aa; }
+    .q-ne { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+    .q-sw { background: #f8fafc; border: 1.5px solid #e2e8f0; }
+    .q-se { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
 
     .q-tag {
       display: inline-flex;
@@ -45,7 +45,7 @@
     .q-tag-nw { background: #fed7aa; color: #7c2d12; }
     .q-tag-ne { background: #bbf7d0; color: #14532d; }
     .q-tag-sw { background: #e2e8f0; color: #334155; }
-    .q-tag-se { background: #bfdbfe; color: #1e3a8a; }
+    .q-tag-se { background: #bbf7d0; color: #14532d; }
 
     .q-title {
       font-size: 1rem;
@@ -66,13 +66,50 @@
     .q-nw .q-action { border-color: #fb923c; }
     .q-ne .q-action { border-color: #22c55e; }
     .q-sw .q-action { border-color: #94a3b8; }
-    .q-se .q-action { border-color: #3b82f6; }
+    .q-se .q-action { border-color: #22c55e; }
 
     .q-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
       margin-top: auto;
+    }
+
+    /* Sammensatte chips: lokal del + felles fundament */
+    .chip-compound {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 20px;
+      overflow: hidden;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .chip-compound .chip-local {
+      padding: 4px 8px 4px 9px;
+      background: #dbeafe;
+      color: #1e3a8a;
+      border: 1px solid #93c5fd;
+      border-right: none;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .chip-compound .chip-arrow {
+      padding: 4px 0;
+      background: linear-gradient(to right, #dbeafe, #d4edda);
+      color: #666;
+      font-size: 0.65rem;
+      line-height: 1;
+    }
+
+    .chip-compound .chip-shared {
+      padding: 4px 9px 4px 8px;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #a3d9b1;
+      border-left: none;
+      border-radius: 0 20px 20px 0;
+      font-size: 0.68rem;
     }
 
     /* Kolonne-headers */
@@ -86,7 +123,7 @@
       line-height: 1.4;
     }
 
-    .col-hdr-left  { background: #fff5f5; color: #c0392b; }
+    .col-hdr-left  { background: #f1f3f5; color: #333; }
     .col-hdr-right { background: #f0fff4; color: #155724; }
 
     /* Rad-headers */
@@ -106,8 +143,8 @@
       line-height: 1.3;
     }
 
-    .row-hdr-top    { background: #cfe2ff; color: #084298; }
-    .row-hdr-bottom { background: #fde8d8; color: #7b341a; }
+    .row-hdr-top    { background: #e9ecef; color: #333; }
+    .row-hdr-bottom { background: #e9ecef; color: #333; }
 
     /* Akse-pil */
     .axis-bar {
@@ -132,42 +169,20 @@
       border-radius: 2px;
     }
 
-    .axis-line-h { background: linear-gradient(to right, #fca5a5, #bbf7d0); }
-    .axis-line-v { background: linear-gradient(to top, #fed7aa, #93c5fd); }
+    .axis-line-h { background: linear-gradient(to right, #adb5bd, #bbf7d0); }
 
     .corner-2x2 { background: transparent; }
-
-    /* Y-akse (separat div utenfor grid) */
-    .y-axis-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      position: absolute;
-    }
   </style>
 </head>
 <body>
 
-  <h1>Gjenbruksmatrisen for digitale tjenester – 2×2</h1>
+  <h1>Gjenbruksmatrisen for digitale tjenester</h1>
   <p class="subtitle">
-    Digitale kapabiliteter plassert etter <strong>scope</strong> (hvem deler behovet?) og
-    <strong>fellesskap</strong> (er dette noe vi bør løse i fellesskap?).
+    Hvor mange har samme behov – og bør det løses i fellesskap?
     <a href="felleseieproblem.html" style="margin-left:10px; font-size:0.8rem; color:#3b82f6; font-weight:600;">Hvorfor dette er viktig →</a>
-    <a href="matrix.html" style="margin-left:10px; font-size:0.8rem; color:#3b82f6; font-weight:600;">Se 3×3-versjon →</a>
-    <a href="matrix_concept.html" style="margin-left:10px; font-size:0.8rem; color:#3b82f6; font-weight:600;">Les om rammeverket →</a>
+    <a href="matrix2x2.html" style="margin-left:10px; font-size:0.8rem; color:#3b82f6; font-weight:600;">Detaljert versjon →</a>
+    <a href="matrix_concept.html" style="margin-left:10px; font-size:0.8rem; color:#3b82f6; font-weight:600;">Om rammeverket →</a>
   </p>
-
-  <div class="legend" style="margin-bottom: 28px;">
-    <span style="font-weight:600; font-size:0.8rem;">Type:</span>
-    <div class="legend-item">
-      <div class="legend-dot" style="background:#c5cae9; border:1px solid #9fa8da;"></div>
-      <span>Infrastruktur / Plattform</span>
-    </div>
-    <div class="legend-item">
-      <div class="legend-dot" style="background:#f8bbd0; border:1px solid #f48fb1;"></div>
-      <span>Applikasjon</span>
-    </div>
-  </div>
 
   <div class="grid-2x2">
 
@@ -175,72 +190,73 @@
     <div class="corner-2x2"></div>
     <div class="col-hdr col-hdr-left">
       ← Bygg selv
-      <div style="font-weight:400; font-size:0.7rem; text-transform:none; margin-top:2px;">Behovet er spesifikt nok til å eie selv</div>
+      <div style="font-weight:400; font-size:0.7rem; text-transform:none; margin-top:2px;">Behovet er spesielt nok til å løse på egen hånd</div>
     </div>
     <div class="col-hdr col-hdr-right">
       Bruk felles →
-      <div style="font-weight:400; font-size:0.7rem; text-transform:none; margin-top:2px;">Fellesskap gir mer verdi enn egeneierskap</div>
+      <div style="font-weight:400; font-size:0.7rem; text-transform:none; margin-top:2px;">Bedre å bruke eller bidra til en felles løsning</div>
     </div>
 
-    <!-- Rad 1: Bred scope -->
-    <div class="row-hdr row-hdr-top">Bred scope</div>
+    <!-- Rad 1: Mange har behovet -->
+    <div class="row-hdr row-hdr-top">Mange har behovet</div>
 
-    <!-- NV: Bred + Bygg selv = Koordineringsgap -->
+    <!-- NV: Mange + Bygg selv = Koordineringsgap -->
     <div class="q-cell q-nw">
       <div class="q-tag q-tag-nw">⚠️ Koordineringsgap</div>
-      <div class="q-title">Mange har behovet.<br>Ingen tar ansvar.</div>
+      <div class="q-title">Alle bygger det samme<br>hver for seg.</div>
       <div class="q-action">
-        Her er det størst risiko for duplisering på tvers av etater. Løftes behovet til riktig nivå kan dette bli et fremtidig fellesgode. Konsulenten kan synliggjøre gapet og argumentere for koordinering.
+        Mange etater har samme behov, men løser det på egenhånd. Det fører til dobbeltarbeid. Bør løftes til en felles løsning.
       </div>
       <div class="q-chips">
-        <span class="chip chip-app">Etatsinterne varslingstjenester</span>
         <span class="chip chip-app">AI-chatbot per etat</span>
-        <span class="chip chip-app">Etatsspesifikt sakarkiv</span>
+        <span class="chip chip-app">Varslingstjeneste per etat</span>
+        <span class="chip chip-app">Eget sakarkiv per etat</span>
       </div>
     </div>
 
-    <!-- NØ: Bred + Bruk felles = Konverger -->
+    <!-- NØ: Mange + Bruk felles = Konverger -->
     <div class="q-cell q-ne">
       <div class="q-tag q-tag-ne">✅ Konverger</div>
-      <div class="q-title">Fellesgodet er modent.<br>Bruk det.</div>
+      <div class="q-title">Fellesløsningen finnes.<br>Bruk den.</div>
       <div class="q-action">
-        Egenutviklet alternativ er vanskelig å forsvare – teknisk og politisk. Bruk fellesløsningen, bygg videre på den, og bidra til å forbedre den der du kan.
+        Det finnes en moden fellesløsning som dekker behovet. Å bygge noe eget gir liten mening.
       </div>
       <div class="q-chips">
         <span class="chip chip-infra">🔧 ID-porten</span>
         <span class="chip chip-infra">🔧 Altinn</span>
         <span class="chip chip-infra">🔧 Kartverket API</span>
+        <span class="chip chip-app">Entur</span>
       </div>
     </div>
 
-    <!-- Rad 2: Smal scope -->
-    <div class="row-hdr row-hdr-bottom">Smal scope</div>
+    <!-- Rad 2: Få har behovet -->
+    <div class="row-hdr row-hdr-bottom">Få har behovet</div>
 
-    <!-- SV: Smal + Bygg selv = Lokal kontroll -->
+    <!-- SV: Få + Bygg selv = Lokal kontroll -->
     <div class="q-cell q-sw">
       <div class="q-tag q-tag-sw">🏠 Lokal kontroll</div>
-      <div class="q-title">Behovet er smalt nok.<br>Egenutvikling er fornuftig.</div>
+      <div class="q-title">Spesielt behov.<br>Greit å bygge selv.</div>
       <div class="q-action">
-        Konteksttilpasning gir mer verdi enn standardisering her. Ikke press dette inn i en fellesmal. Fokus på god arkitektur og gjenbrukbare mønstre lokalt.
+        Behovet er så spesifikt at en skreddersydd løsning gir mest verdi. Ingen grunn til å standardisere.
       </div>
       <div class="q-chips">
         <span class="chip chip-app">Kommunal kulturportal</span>
-        <span class="chip chip-app">Arealplanapp (lokale særregler)</span>
-        <span class="chip chip-app">Lokalt tilpasset fagsystem</span>
+        <span class="chip chip-app">Internt fagsystem</span>
+        <span class="chip chip-app">Lokalt tilpasset saksbehandling</span>
       </div>
     </div>
 
-    <!-- SØ: Smal + Bruk felles = Bygg på skuldrene -->
+    <!-- SØ: Få + Bruk felles = Bygg på skuldrene -->
     <div class="q-cell q-se">
       <div class="q-tag q-tag-se">🔗 Bygg på skuldrene</div>
-      <div class="q-title">Smal kontekst,<br>felles fundament.</div>
+      <div class="q-title">Egen løsning,<br>felles byggeklosser.</div>
       <div class="q-action">
-        Løsningen er konteksttilpasset, men bruker eksisterende plattformer og fellestjenester som fundament. Unngår å gjenoppfinne hjulet for autentisering, kart, skjema o.l.
+        Løsningen er spesialtilpasset, men bruker felleskomponenter som innlogging, kart eller skjema i bunn.
       </div>
       <div class="q-chips">
-        <span class="chip chip-app">DigiSos (på Altinn/NAV-plattform)</span>
-        <span class="chip chip-app">Kommunal innsynsportal (eInnsyn)</span>
-        <span class="chip chip-app">Fylkeskommunal kollektivapp (Entur-data)</span>
+        <span class="chip-compound"><span class="chip-local">Søknadsportal</span><span class="chip-arrow"> → </span><span class="chip-shared">🔧 ID-porten</span></span>
+        <span class="chip-compound"><span class="chip-local">Kollektivapp</span><span class="chip-arrow"> → </span><span class="chip-shared">🔧 Entur API</span></span>
+        <span class="chip-compound"><span class="chip-local">Innsynsportal</span><span class="chip-arrow"> → </span><span class="chip-shared">🔧 eInnsyn</span></span>
       </div>
     </div>
 
@@ -253,7 +269,7 @@
     <span class="axis-lbl">Bruk felles</span>
   </div>
   <div style="text-align:center; max-width:860px; padding-left:90px;">
-    <span style="font-size:0.68rem; color:#aaa; font-weight:600; letter-spacing:0.05em;">FELLESSKAP – bør dette løses i fellesskap?</span>
+    <span style="font-size:0.68rem; color:#aaa; font-weight:600; letter-spacing:0.05em;">BØR DETTE LØSES I FELLESSKAP?</span>
   </div>
 
 </body>
