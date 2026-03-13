@@ -10,9 +10,9 @@ Gjenbruksmatrisen ble utviklet som del av et foredrag om offentlig digitaliserin
 
 ## Hovedside
 
-### [`matrix2x2.html`](https://heming-h.github.io/gjenbruksmatrisen/matrix2x2.html) ← start her
+### [`matrix2x2.html`](https://heming-h.github.io/gjenbrukskartet/matrix2x2.html) ← start her
 
-👉 **https://heming-h.github.io/gjenbruksmatrisen/matrix2x2.html**
+👉 **https://heming-h.github.io/gjenbrukskartet/matrix2x2.html**
 
 En interaktiv 2×2-matrise som plasserer digitale kapabiliteter i fire kvadranter basert på to spørsmål:
 
