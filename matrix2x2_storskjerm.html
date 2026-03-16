@@ -2,53 +2,37 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8" />
-  <title>Gjenbruksmatrisen for digitale tjenester – forenklet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gjenbruksmatrisen for digitale tjenester – storskjerm</title>
   <link rel="stylesheet" href="gjenbruksmatrisen.css" />
 </head>
-<body>
+<body class="storskjerm-page">
 
   <h1>Gjenbruksmatrisen for digitale tjenester</h1>
-  <p class="subtitle">
-    Hvor mange har samme behov – og bør det løses i fellesskap?
-    <a class="subtitle-link" href="felleseieproblem.html">Hvorfor dette er viktig →</a>
-    <a class="subtitle-link" href="matrix2x2.html">Detaljert versjon →</a>
-    <a class="subtitle-link" href="matrix_concept.html">Om rammeverket →</a>
-  </p>
+  <p class="subtitle">Mange har samme behov – bør det løses i fellesskap?</p>
 
   <div class="grid-2x2">
-
-    <!-- Rad 0: corner + kolonne-headers -->
-    <div class="corner-2x2"></div>
-    <div class="col-hdr col-hdr-left">
-      ← Bygg selv
-      <div class="col-hdr-subtext">Behovet er spesielt nok til å løse på egen hånd</div>
-    </div>
-    <div class="col-hdr col-hdr-right">
-      Bruk felles →
-      <div class="col-hdr-subtext">Bedre å bruke eller bidra til en felles løsning</div>
-    </div>
 
     <!-- Rad 1: Mange har behovet -->
     <div class="row-hdr row-hdr-top">Mange har behovet</div>
 
-    <!-- NV: Mange + Bygg selv = Koordineringsgap -->
+    <!-- NV: Koordineringsgap -->
     <div class="q-cell q-nw">
-      <div class="q-tag q-tag-nw">⚠️ Koordineringsgap</div>
-      <div class="q-title">Alle bygger det samme<br>hver for seg.</div>
+      <div class="q-tag q-tag-nw">Koordineringsgap</div>
+      <div class="q-title">Alle bygger det samme hver for seg.</div>
       <div class="q-action">
         Mange etater har samme behov, men løser det på egenhånd. Det fører til dobbeltarbeid. Bør løftes til en felles løsning.
       </div>
       <div class="q-chips">
         <span class="chip chip-app">AI-chatbot per etat</span>
-        <span class="chip chip-app">Varslingstjeneste per etat</span>
-        <span class="chip chip-app">Eget sakarkiv per etat</span>
+        <span class="chip chip-app">Kollektivapp per selskap</span>
       </div>
     </div>
 
-    <!-- NØ: Mange + Bruk felles = Konverger -->
+    <!-- NØ: Konverger -->
     <div class="q-cell q-ne">
-      <div class="q-tag q-tag-ne">✅ Konverger</div>
-      <div class="q-title">Fellesløsningen finnes.<br>Bruk den.</div>
+      <div class="q-tag q-tag-ne">Konverger</div>
+      <div class="q-title">Fellesløsningen finnes. Bruk den.</div>
       <div class="q-action">
         Det finnes en moden fellesløsning som dekker behovet. Å bygge noe eget gir liten mening.
       </div>
@@ -63,24 +47,23 @@
     <!-- Rad 2: Få har behovet -->
     <div class="row-hdr row-hdr-bottom">Få har behovet</div>
 
-    <!-- SV: Få + Bygg selv = Lokal kontroll -->
+    <!-- SV: Lokal kontroll -->
     <div class="q-cell q-sw">
-      <div class="q-tag q-tag-sw">🏠 Lokal kontroll</div>
-      <div class="q-title">Spesielt behov.<br>Greit å bygge selv.</div>
+      <div class="q-tag q-tag-sw">Lokal kontroll</div>
+      <div class="q-title">Spesielt behov. Greit å bygge selv.</div>
       <div class="q-action">
         Behovet er så spesifikt at en skreddersydd løsning gir mest verdi. Ingen grunn til å standardisere.
       </div>
       <div class="q-chips">
-        <span class="chip chip-app">Kommunal kulturportal</span>
         <span class="chip chip-app">Internt fagsystem</span>
-        <span class="chip chip-app">Lokalt tilpasset saksbehandling</span>
+        <span class="chip chip-app">Differensierende løsninger</span>
       </div>
     </div>
 
-    <!-- SØ: Få + Bruk felles = Bygg på skuldrene -->
+    <!-- SØ: Bygg på skuldrene -->
     <div class="q-cell q-se">
-      <div class="q-tag q-tag-se">🔗 Bygg på skuldrene</div>
-      <div class="q-title">Egen løsning,<br>felles byggeklosser.</div>
+      <div class="q-tag q-tag-se">Bygg på skuldrene</div>
+      <div class="q-title">Egen løsning, felles byggeklosser.</div>
       <div class="q-action">
         Løsningen er spesialtilpasset, men bruker felleskomponenter som innlogging, kart eller skjema i bunn.
       </div>
@@ -94,13 +77,10 @@
   </div>
 
   <!-- X-akse-etikett -->
-  <div class="axis-bar axis-bar-offset">
+  <div class="axis-bar axis-bar-offset-large">
     <span class="axis-lbl">Bygg selv</span>
     <div class="axis-line axis-line-h"></div>
     <span class="axis-lbl">Bruk felles</span>
-  </div>
-  <div class="axis-footnote-wrap">
-    <span class="axis-footnote">BØR DETTE LØSES I FELLESSKAP?</span>
   </div>
 
 </body>

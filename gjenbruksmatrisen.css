@@ -437,3 +437,330 @@ section:last-child { margin-bottom: 0; }
   color: #555;
   line-height: 1.5;
 }
+
+
+/* ══════════════════════════════════════
+   FORENKLET 2x2 (matrix2x2_forenklet.html)
+   ══════════════════════════════════════ */
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: 90px 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 6px;
+  max-width: 1200px;
+}
+
+.q-cell {
+  border-radius: 12px;
+  padding: 24px 28px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.q-nw { background: #fff7ed; border: 1.5px solid #fed7aa; }
+.q-ne { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+.q-sw { background: #f8fafc; border: 1.5px solid #e2e8f0; }
+.q-se { background: #f0fdf4; border: 1.5px solid #bbf7d0; }
+
+.q-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 4px 10px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.q-tag-nw { background: #fed7aa; color: #7c2d12; }
+.q-tag-ne { background: #bbf7d0; color: #14532d; }
+.q-tag-sw { background: #e2e8f0; color: #334155; }
+.q-tag-se { background: #bbf7d0; color: #14532d; }
+
+.q-title {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1a1a2e;
+}
+
+.q-action {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #444;
+  border-left: 3px solid #cbd5e1;
+  padding-left: 10px;
+  margin-bottom: 4px;
+}
+
+.q-nw .q-action { border-color: #fb923c; }
+.q-ne .q-action { border-color: #22c55e; }
+.q-sw .q-action { border-color: #94a3b8; }
+.q-se .q-action { border-color: #22c55e; }
+
+.q-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: auto;
+}
+
+.chip-compound {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.chip-compound .chip-local {
+  padding: 4px 8px 4px 9px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  border: 1px solid #93c5fd;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+}
+
+.chip-compound .chip-arrow {
+  padding: 4px 0;
+  background: linear-gradient(to right, #dbeafe, #d4edda);
+  color: #666;
+  font-size: 0.65rem;
+  line-height: 1;
+}
+
+.chip-compound .chip-shared {
+  padding: 4px 9px 4px 8px;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #a3d9b1;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  font-size: 0.68rem;
+}
+
+.col-hdr {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 8px;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+.col-hdr-left { background: #f1f3f5; color: #333; }
+.col-hdr-right { background: #f0fff4; color: #155724; }
+
+.col-hdr-subtext {
+  font-weight: 400;
+  font-size: 0.7rem;
+  text-transform: none;
+  margin-top: 2px;
+}
+
+.row-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 12px 6px;
+  border-radius: 8px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.row-hdr-top { background: #e9ecef; color: #333; }
+.row-hdr-bottom { background: #e9ecef; color: #333; }
+
+.axis-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  max-width: 1200px;
+}
+
+.axis-bar-offset { padding-left: 96px; }
+
+.axis-lbl {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #888;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.axis-line {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.axis-line-h { background: linear-gradient(to right, #adb5bd, #bbf7d0); }
+
+.axis-footnote-wrap {
+  text-align: center;
+  max-width: 1200px;
+  padding-left: 90px;
+}
+
+.axis-footnote {
+  font-size: 0.68rem;
+  color: #aaa;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.corner-2x2 { background: transparent; }
+
+.subtitle-link {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+
+/* ══════════════════════════════════════
+   STORSKJERM 2x2 (matrix2x2_storskjerm.html)
+   ══════════════════════════════════════ */
+
+.storskjerm-page {
+  padding: 48px 56px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.storskjerm-page h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+}
+
+.storskjerm-page .subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 36px;
+}
+
+.storskjerm-page .grid-2x2 {
+  grid-template-columns: 110px 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+  min-height: 0;
+}
+
+.storskjerm-page .q-cell {
+  border-radius: 16px;
+  padding: 32px 36px;
+  gap: 16px;
+}
+
+.storskjerm-page .q-nw { border-width: 2px; }
+.storskjerm-page .q-ne { border-width: 2px; }
+.storskjerm-page .q-sw { border-width: 2px; }
+.storskjerm-page .q-se { border-width: 2px; }
+
+.storskjerm-page .q-tag {
+  gap: 8px;
+  font-size: 1rem;
+  padding: 6px 16px;
+  border-radius: 24px;
+}
+
+.storskjerm-page .q-title {
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+.storskjerm-page .q-action {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  border-left-width: 4px;
+  padding-left: 16px;
+}
+
+.storskjerm-page .q-chips { gap: 8px; }
+
+.storskjerm-page .chip {
+  font-size: 1.05rem;
+  padding: 6px 14px;
+  border-radius: 24px;
+}
+
+.storskjerm-page .chip-compound {
+  border-radius: 24px;
+  font-size: 1.05rem;
+}
+
+.storskjerm-page .chip-compound .chip-local {
+  padding: 6px 12px 6px 14px;
+  border-radius: 24px 0 0 24px;
+}
+
+.storskjerm-page .chip-compound .chip-arrow {
+  padding: 6px 2px;
+  font-size: 0.9rem;
+}
+
+.storskjerm-page .chip-compound .chip-shared {
+  padding: 6px 14px 6px 12px;
+  border-radius: 0 24px 24px 0;
+  font-size: 0.95rem;
+}
+
+.storskjerm-page .col-hdr {
+  font-size: 1.2rem;
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+
+.storskjerm-page .col-hdr .col-sub {
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: none;
+  margin-top: 4px;
+}
+
+.storskjerm-page .row-hdr {
+  font-size: 1.1rem;
+  padding: 16px 10px;
+  border-radius: 12px;
+}
+
+.storskjerm-page .axis-bar {
+  position: sticky;
+  bottom: 18px;
+  z-index: 2;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.storskjerm-page .axis-bar-offset-large { padding-left: 120px; }
+
+.storskjerm-page .axis-lbl { font-size: 1rem; }
+
+.storskjerm-page .axis-line { height: 4px; }
+
+.storskjerm-page .axis-caption {
+  text-align: center;
+  padding-left: 110px;
+  font-size: 0.95rem;
+  color: #aaa;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
