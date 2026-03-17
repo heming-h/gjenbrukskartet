@@ -454,7 +454,7 @@ section:last-child { margin-bottom: 0; }
 .q-cell {
   border-radius: 12px;
   padding: 24px 28px;
-  min-height: 160px;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -516,12 +516,12 @@ section:last-child { margin-bottom: 0; }
   align-items: center;
   border-radius: 20px;
   overflow: hidden;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 600;
 }
 
 .chip-compound .chip-local {
-  padding: 4px 8px 4px 9px;
+  padding: 4px 8px 4px 8px;
   background: #dbeafe;
   color: #1e3a8a;
   border: 1px solid #93c5fd;
@@ -538,13 +538,13 @@ section:last-child { margin-bottom: 0; }
 }
 
 .chip-compound .chip-shared {
-  padding: 4px 9px 4px 8px;
+  padding: 4px 8px 4px 8px;
   background: #d4edda;
   color: #155724;
   border: 1px solid #a3d9b1;
   border-left: none;
   border-radius: 0 20px 20px 0;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
 }
 
 .col-hdr {
@@ -696,7 +696,7 @@ section:last-child { margin-bottom: 0; }
 .storskjerm-page .q-chips { gap: 8px; }
 
 .storskjerm-page .chip {
-  font-size: 1.05rem;
+  font-size: 1rem;
   padding: 6px 14px;
   border-radius: 24px;
 }
@@ -713,13 +713,13 @@ section:last-child { margin-bottom: 0; }
 
 .storskjerm-page .chip-compound .chip-arrow {
   padding: 6px 2px;
-  font-size: 0.9rem;
+  font-size: 1.05rem;
 }
 
 .storskjerm-page .chip-compound .chip-shared {
   padding: 6px 14px 6px 12px;
   border-radius: 0 24px 24px 0;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 
 .storskjerm-page .col-hdr {
