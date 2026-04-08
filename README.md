@@ -10,32 +10,20 @@ Gjenbruksmatrisen ble utviklet som del av et foredrag om offentlig digitaliserin
 
 ## Hovedside
 
-### [`matrix2x2.html`](https://heming-h.github.io/gjenbrukskartet/matrix2x2.html) ← start her
-
-👉 **https://heming-h.github.io/gjenbrukskartet/matrix2x2.html**
+### ![](blob:vscode-webview://15vhu7p5fupb04ctlv0hcvelolrd0l4k8475p57ttatv1qgvjp6n/f79d57d9-c3cc-46d2-9158-da9dc4075fd9)[https://heming-h.github.io/gjenbrukskartet/matrix2x2_storskjerm.html](https://heming-h.github.io/gjenbrukskartet/matrix2x2_storskjerm.html "https://heming-h.github.io/gjenbrukskartet/matrix2x2_storskjerm.html")  
 
 En interaktiv 2×2-matrise som plasserer digitale kapabiliteter i fire kvadranter basert på to spørsmål:
 
-- **X-akse:** Bør løsningen bygges selv, eller finnes det et felles alternativ?
-- **Y-akse:** Er behovet bredt (delt av mange etater) eller smalt (konteksttilpasset)?
+-   **X-akse:** Bør løsningen bygges selv, eller finnes det et felles alternativ?
+-   **Y-akse:** Er behovet bredt (delt av mange etater) eller smalt (konteksttilpasset)?
 
 De fire kvadrantene er:
-- ⚠️ **Koordineringsgap** – Bred scope, bygges selv: risiko for duplisering på tvers av etater
-- ✅ **Konverger** – Bred scope, bruk felles: fellesgodet finnes og er modent
-- 🏠 **Lokal kontroll** – Smal scope, bygges selv: egenutvikling er fornuftig
-- 🔗 **Bygg på skuldrene** – Smal scope, bruk felles: konteksttilpasset løsning på felles fundament
 
-## Øvrige filer
-
-### `matrix.html`
-En utvidet 3×3-matrise som i tillegg visualiserer kapabilitetenes **geografiske nivå** (Lokalt · Regionalt · Nasjonalt) langs Y-aksen og **gjenbrukbarhet** langs X-aksen.
-
-### `matrix_concept.html`
-Konseptbeskrivelse og bakgrunn for rammeverket.
-
-### `quadrantChart.md`
-Tidlig utkast i Mermaid quadrantChart-format. Beholdt som referanse.
+-   **Koordineringsgap** – Bred scope, bygges selv: risiko for duplisering på tvers av etater
+-   **Konverger** – Bred scope, bruk felles: fellesgodet finnes og er modent
+-   **Lokal kontroll** – Smal scope, bygges selv: egenutvikling er fornuftig
+-   **Bygg på skuldrene** – Smal scope, bruk felles: konteksttilpasset løsning på felles fundament
 
 ## Bruk
 
-Åpne `matrix2x2.html` i nettleseren via lenken over, eller åpne HTML-filene lokalt – ingen server eller installasjon nødvendig.
+Åpne i nettleseren via lenken over, eller åpne HTML-filene lokalt – ingen server eller installasjon nødvendig.
